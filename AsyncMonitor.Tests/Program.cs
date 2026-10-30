@@ -42,8 +42,6 @@ var all = await s.RunParallelAsync(
 );
 Check(all.Count == 3 && all.All(x => x.Success), "параллельный запуск WhenAll");
 // TODO: Добавить тесты на пустое имя, отрицательную задержку и CancellationToken.
-//Check(one1.Name == "", "пустое имя");
-//Check(one1.Duration >= TimeSpan.FromMilliseconds(-20), "отрицательная задержка");
 
 Console.WriteLine($"Итого: {passed} пройдено, {failed} ошибок.");
 return failed == 0 ? 0 : 1;
